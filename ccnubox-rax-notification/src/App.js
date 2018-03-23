@@ -16,20 +16,17 @@ class App extends Component {
   }
 
   componentWillMount() {
-    alert(window.location.href)
     InfoService.getInfoList()
       .then((data) => {
         this.setState({data})
-        alert(this.state.data[0].content)
-        
       })
   }
 
   listItem = (item, index) => {
     return (
-      <View>
-        <Text>{item.title}</Text>
-        <Text>{item.date}</Text>
+      <View style={index?mystyle.item:[mystyle.item,mystyle.first]}>
+        <Text style={mystyle.title}>{item.title}</Text>
+        <Text style={mystyle.time}>{item.date}</Text>
       </View>
     );
   }
@@ -50,9 +47,30 @@ const mystyle = {
   container: {
     flex: 1,
     backgroundColor: '#efeff4',
-    paddingTop: 40,
-    paddingBottom: 40,
+    
+  },
+  item: {
+    height: 160,
+    backgroundColor: '#ffffff',
+    paddingLeft: 60,
+    paddingRight: 60,
+    borderTopWidth: 10,
+    borderTopStyle: "solid",
+    borderTopColor: "#ccccff",
+    marginBottom: 20
+  },
+  first: {
+    marginTop: 40
+  },
+  title: {
+    fontSize: 28,
+    coloe: "#434343",
+    marginTop: 20
+  },
+  time: {
+    fontSize: 24,
+    color: "#8e8e93",
+    marginTop: 15
   }
-}
-
+} 
 export default App;
