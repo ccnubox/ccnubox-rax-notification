@@ -4,7 +4,7 @@ const InfoService = {
   getInfoList(options) {
     return request({
       method: 'GET',
-      url: 'https://ccnubox.muxixyz.com/api/info',
+      url: 'https://ccnubox.muxixyz.com/api/info/',
     });
   },
 };

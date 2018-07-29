@@ -1,29 +1,18 @@
-.app {
-  flex: 1;
-  justify-content: center;
-  align-items: center;
+.text {
+  padding-left: 60;
+  padding-right: 60;
 }
-
-
-.contaner {
-  flex: 1;
-  background-color: '#efeff4';
-  padding: 40 0 40 0;
-}
-
-.item {
-  height: 160;
-  background-color: '#efeff4';
-  padding: 0 60 0 60;
-  border-top: 10 solid '#ccccff';
-}
-
 .title {
   font-size: 28;
-  color: '#434343';
+  color: #434343;
+  margin-top: 20;
+  font-weight: bold;
 }
-
-.time {
+.content {
   font-size: 24;
-  color: '#8e8e93';
+  color: #434343;
+}
+.date{
+  font-size: 24;
+  color: #8e8e93;
 }
